@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
@@ -77,8 +78,8 @@ const PricingCard = ({ plan }) => (
         </ul>
         <button
             className={`w-full px-4 py-2 rounded-md text-sm font-medium transition ${plan.buttonVariant === "solid"
-                    ? "bg-green-600 text-white hover:bg-green-700"
-                    : "border border-green-600 text-green-600 hover:bg-green-50"
+                ? "bg-green-600 text-white hover:bg-green-700"
+                : "border border-green-600 text-green-600 hover:bg-green-50"
                 }`}
         >
             {plan.buttonText}
