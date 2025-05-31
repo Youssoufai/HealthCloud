@@ -1,3 +1,4 @@
+import CallToAction from "./components/CTA";
 import FAQSection from "./components/Faqs";
 import Features from "./components/Feature";
 import Hero from "./components/Hero";
@@ -12,6 +13,7 @@ export default function Home() {
       <PricingSection />
       <HowItWorks />
       <FAQSection />
+      <CallToAction />
     </>
   );
 }
