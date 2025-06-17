@@ -36,7 +36,7 @@ export default function Navbar() {
                             href="#"
                             className="bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-4 py-2 rounded-md"
                         >
-                            Register Your Hospital
+                            Register
                         </Link>
                     </div>
                 </div>

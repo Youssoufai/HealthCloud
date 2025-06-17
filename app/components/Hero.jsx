@@ -25,7 +25,7 @@ export default function Hero() {
                     <div className="flex flex-wrap items-center gap-4 pt-2">
                         <Link href="/register-hospital">
                             <span className="inline-block bg-teal-600 text-white text-sm font-semibold px-5 py-2 rounded-md hover:bg-teal-700 transition">
-                                Register Your Hospital
+                                Register
                             </span>
                         </Link>
                         <Link href="/book-demo">

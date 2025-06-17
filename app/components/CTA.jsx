@@ -21,12 +21,12 @@ export default function CallToAction() {
                 <div className="flex justify-center gap-4 flex-wrap">
                     <Link href="#register-hospital">
                         <p className="bg-white text-teal-600 font-semibold px-6 py-2 rounded shadow hover:bg-gray-100 transition">
-                            Register Your Hospital
+                            Register
                         </p>
                     </Link>
                     <Link href="#create-account">
                         <p className="border border-white text-white font-semibold px-6 py-2 rounded hover:bg-white hover:text-teal-600 transition">
-                            Create Patient Account
+                            Create an Account
                         </p>
                     </Link>
                 </div>
