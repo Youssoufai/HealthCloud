@@ -33,7 +33,7 @@ export default function Navbar() {
                             Login
                         </Link>
                         <Link
-                            href="#"
+                            href="/register"
                             className="bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-4 py-2 rounded-md"
                         >
                             Register
