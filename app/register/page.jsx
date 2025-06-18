@@ -8,10 +8,16 @@ import {
     User,
     Shield,
     ClipboardList,
+    Hospital,
+    Beaker,
 } from "lucide-react";
 import Doctor from "../components/doctor";
 import Patient from "../components/patient";
 import Admin from "../components/admin";
+import Signup from "../components/hospital";
+import { FaFirstAid } from "react-icons/fa";
+import Laboratory from "../components/Laboratory";
+import Pharmacy from "../components/Pharmacy";
 
 export default function RegisterPage() {
     const [selectedRole, setSelectedRole] = useState("doctor");
@@ -30,36 +36,45 @@ export default function RegisterPage() {
             icon: <Stethoscope className="w-6 h-6 mx-auto text-teal-600" />,
         },
         {
+            id: "hospital",
+            name: "Hospital/Clinic",
+            description: "Manage health facilities & users",
+            icon: <Hospital className="w-6 h-6 mx-auto text-gray-500" />,
+        },
+        {
             id: "admin",
             name: "Admin",
             description: "Manage system and user settings",
             icon: <Shield className="w-6 h-6 mx-auto text-gray-500" />,
+        },
+        {
+            id: "laboratory",
+            name: "Laboratory",
+            description: "Manage system and user settings",
+            icon: <Beaker className="w-6 h-6 mx-auto text-gray-500" />,
+        },
+        {
+            id: "pharmacy",
+            name: "Pharmacy",
+            description: "Manage system and user settings",
+            icon: <FaFirstAid className="w-6 h-6 mx-auto text-gray-500" />,
         },
     ];
 
     const renderForm = () => {
         switch (selectedRole) {
             case "patient":
-                return (
-                    <>
-                        <Patient />
-                    </>
-                );
-
+                return <Patient />;
             case "doctor":
-                return (
-                    <>
-                        <Doctor />
-                    </>
-                );
-
+                return <Doctor />;
             case "admin":
-                return (
-                    <>
-                        <Admin />
-                    </>
-                );
-
+                return <Admin />;
+            case "hospital":
+                return <Signup />;
+            case "laboratory":
+                return <Laboratory />;
+            case "pharmacy":
+                return <Pharmacy />;
             default:
                 return null;
         }
@@ -100,13 +115,14 @@ export default function RegisterPage() {
                         <div className="pb-2 text-gray-400 cursor-pointer">Login</div>
                     </div>
 
+                    {/* Select Role */}
                     <div>
                         <p className="text-lg font-semibold mb-4">Select your role</p>
-                        <div className="flex gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {roles.map((role) => (
                                 <div
                                     key={role.id}
-                                    className={`w-full p-4 border rounded-lg cursor-pointer transition-all ${selectedRole === role.id
+                                    className={`p-4 border rounded-lg cursor-pointer transition-all ${selectedRole === role.id
                                         ? "border-teal-600 shadow-md"
                                         : "border-gray-200 hover:border-teal-400"
                                         }`}
@@ -122,6 +138,7 @@ export default function RegisterPage() {
                         </div>
                     </div>
 
+                    {/* Dynamic Form */}
                     <form className="space-y-6">{renderForm()}</form>
 
                     <p className="text-sm text-center mt-2">
